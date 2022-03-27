@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFF;
+}
+
+#konva-container {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 150px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 6%;
+}
+
+.button {
+    flex-basis: 47%;
+    flex-shrink: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+#click-button {
+    width: 80%;
+    height: 200px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFF;
+    background: #1458DB;
+    margin: 30% auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: 3px solid #0983F0;
+    box-shadow: 3px 3px 15px #666;
+    font-family: sans-serif;
+}
+
+#debug {
+    position: fixed;
+    bottom: 0;
+    font-size: 30px;
+}

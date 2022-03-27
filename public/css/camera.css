@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#video-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#player {
+    max-width: 100%;
+    margin: 0;
+}
+
+#capture {
+    width: 90%;
+    margin: 20px auto;
+    font-size: 20px;
+    display: block;
+    height: 40px;
+    border-radius: 5px;
+    background: #007bff;
+    border: none;
+    color: #FFF;
+    font-weight: 500;
+}
+
+#canvas {
+    display: none;
+}
+
+#output {
+    display: block;
+    margin: 50px auto;
+}

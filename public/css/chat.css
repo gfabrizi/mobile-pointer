@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    background: url("/img/chat-background.png");
+}
+
+body {
+    margin: 0;
+    font-family: helvetica, sans-serif;
+    font-size: 18px;
+    height: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+label,
+input,
+button {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    font-size: 18px;
+}
+
+hr {
+    border-bottom: none;
+    border-top: 1px solid #CCC;
+}
+
+#room-login-page,
+#room-chat-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    height: 100%;
+    background: #f4fbffb3;
+    box-shadow: 0 0 20px #999;
+}
+
+@media screen and (min-width: 768px) {
+    #room-login-page,
+    #room-chat-page {
+        padding: 30px 50px;
+    }
+}
+
+#room-chat-page {
+    padding-bottom: 0;
+}
+
+/* Schermata login */
+#room-login-page {
+    padding-top: 200px;
+}
+
+#room-id {
+    appearance: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    line-height: 1.5;
+}
+
+#room-id:focus {
+    border-color: #86b7fe;
+    outline: 0;
+}
+
+#room-id.error {
+    border: 1px solid #dc3545;
+}
+
+#room-id.error:focus {
+    border-color: #dc3545;
+}
+
+#room-login {
+    border-radius: 4px;
+    background: #007bff;
+    border: none;
+    color: #FFF;
+    margin-top: 24px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: 6px 12px;
+}
+
+/* Schermata chat */
+#room-chat-page {
+    position: relative;
+}
+
+#room-messages {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100% - 215px);
+    padding: 0;
+    overflow-y: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.room-messages::-webkit-scrollbar {
+    display: none;
+}
+
+#new-message-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 30px;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    #new-message-wrapper {
+        padding: 0 50px;
+    }
+}
+
+#new-message-text {
+    width: 100%;
+    height: 108px; /* (line-height * 4) + padding-top + padding-bottom */
+    resize: none;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    appearance: none;
+    border: 1px solid #ced4da;
+    line-height: 1.5;
+}
+
+#new-message-text:focus {
+    border-color: #86b7fe;
+    outline: 0;
+}
+
+#new-message-send {
+    border-radius: 5px;
+    background: #007bff;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: 6px 12px;
+}
+
+.room-message {
+    background: #FFF;
+    padding: 10px 16px 7px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 5px #DDD;
+    border-radius: 10px 10px 10px 0;
+    line-height: 1.5;
+    width: max-content;
+    max-width: 100%;
+    word-break: break-all;
+}
+
+.room-message.mine {
+    align-self: flex-end;
+    background: #007bff;
+    color: #FFF;
+    border-radius: 10px 10px 0 10px;
+    text-align: right;
+}
+
+.room-message span {
+    display: block;
+    font-size: 11px;
+    font-style: italic;
+    text-align: left;
+    opacity: 0.8;
+}
+
+.room-message.mine span {
+    text-align: right;
+}
+
+#is-typing {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    width: min-content;
+    font-size: 0;
+    margin-bottom: 10px;
+}
+
+#is-typing img {
+    width: 60px;
+}
